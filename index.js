@@ -1712,11 +1712,7 @@ Read more on https://git.io/JJc0W`);
         this._express.send(msg);
       }
     } else {
-      if (debugLevel && debugLevel !== 'log') {
-        console[debugLevel](msg);
-      } else {
-        process.stdout.write(msg);
-      }
+      console[debugLevel || 'log'](msg);
     }
   }
 };
